@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16">
+    <section
+      id="contact"
+      className="bg-white py-16 text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white"
+    >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

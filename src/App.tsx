@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar navLinks={navLinks} /> 
-      <main className="pt-20">
+      <main>
         <Hero />
         <About />
         <Projects />

@@ -7,7 +7,10 @@ import { strengthContainer } from "../animations/variants";
 
 const About = () => {
   return (
-    <section id="about" className="py-16">
+    <section
+      id="about"
+      className="bg-white py-16 text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white"
+    >
       <Container>
         <SectionHeading
           title="About Me"
@@ -18,14 +21,14 @@ const About = () => {
           {/* About content */}
 
           <div className="mt-14 max-w-xl">
-            <p className="text-lg leading-8 text-gray-600">
+            <p className="text-lg leading-8 text-gray-600 transition-colors duration-300 dark:text-gray-300">
               I'm a Software engineer with experience spanning web development,
               business automation, and software quality assurance. I enjoy
               turning business requirements into practical digital solutions
               that are reliable, accessible, and easy to use.
             </p>
 
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 transition-colors duration-300 dark:text-gray-300">
               My current work involves building and maintaining web platforms,
               developing internal workflow applications, and collaborating with
               business and technical teams to improve how processes are

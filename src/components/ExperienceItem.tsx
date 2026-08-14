@@ -14,23 +14,31 @@ const ExperienceItem = ({ experience }: ExperienceItemProps) => {
       transition={{ duration: 0.6 }}
       className="relative pl-10"
     >
-      <div className="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-gray-900 bg-white" />
-      <h3 className="text-xl font-semibold text-gray-900">{experience.role}</h3>
+      <div className="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-gray-900 bg-white transition-colors duration-300 dark:border-white dark:bg-gray-950" />
 
-      <p className="mt-1 font-medium text-gray-700">
+      <h3 className="text-xl font-semibold text-gray-900 transition-colors duration-300 dark:text-white">
+        {experience.role}
+      </h3>
+
+      <p className="mt-1 font-medium text-gray-700 transition-colors duration-300 dark:text-gray-300">
         {experience.company} · {experience.location}
       </p>
 
-      <p className="mt-1 text-sm text-gray-500">
+      <p className="mt-1 text-sm text-gray-500 transition-colors duration-300 dark:text-gray-400">
         {experience.startDate} – {experience.endDate}
       </p>
 
-      <p>{experience.description}</p>
+      <p className="mt-3 leading-7 text-gray-600 transition-colors duration-300 dark:text-gray-300">
+        {experience.description}
+      </p>
 
-      <ul className="mt-4 max-w-3xl space-y-2">
+      <ul className="list-disc mt-4 max-w-3xl space-y-2">
         {experience.highlights.map((highlight) => (
-          <li key={highlight} className="text-sm leading-6 text-gray-600">
-            • {highlight}
+          <li
+            key={highlight}
+            className="text-sm leading-6 text-gray-600 transition-colors duration-300 dark:text-gray-300"
+          >
+            {highlight}
           </li>
         ))}
       </ul>

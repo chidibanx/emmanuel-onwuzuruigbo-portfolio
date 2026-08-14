@@ -6,8 +6,29 @@ import { techContainer } from "../animations/variants";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-12 md:grid-cols-2">
+    <section
+      id="home"
+      className="relative overflow-hidden min-h-screen flex items-center bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white"
+    >
+      {/* Geometric Background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-40 dark:opacity-20"
+      >
+        <div
+          className="absolute inset-0
+      bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]
+      bg-[size:48px_48px]
+      dark:bg-[linear-gradient(to_right,#374151_1px,transparent_1px),linear-gradient(to_bottom,#374151_1px,transparent_1px)]"
+        />
+
+        <div className="absolute right-[10%] top-[15%] h-32 w-32 rounded-full border border-gray-300 dark:border-gray-700" />
+
+        <div className="absolute bottom-[18%] left-[8%] h-20 w-20 rotate-45 border border-gray-300 dark:border-gray-700" />
+
+        <div className="absolute right-[30%] top-[30%] h-3 w-3 rounded-full bg-gray-400 dark:bg-gray-600" />
+      </div>
+      <div className="z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 py-12 md:grid-cols-2">
         {/* Hero Content */}
         <div>
           <motion.p

@@ -9,9 +9,18 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-white py-16 text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white"
+      className="relative overflow-hidden bg-white py-16 text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white"
     >
-      <Container>
+      {/* Geometric Background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-40 dark:opacity-20"
+      >
+        <div className="absolute -right-16 top-20 h-32 w-32 rounded-full border border-gray-300 dark:border-gray-700" />
+
+        <div className="absolute bottom-20 left-10 h-12 w-12 rotate-45 border border-gray-300 dark:border-gray-700" />
+      </div>
+      <Container className="relative z-10">
         <SectionHeading
           title="About Me"
           subtitle="Building software with a broader engineering perspective."

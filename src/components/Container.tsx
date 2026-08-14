@@ -2,13 +2,13 @@ import type { ReactNode } from "react";
 
 interface ContainerProps {
   children: ReactNode;
+  className?: string;
 }
 
-export const Container = ({ children }: ContainerProps) => {
+export const Container = ({ children, className = "" }: ContainerProps) => {
   return (
-    <div className="mx-auto max-w-7xl px-6">
+    <div className={`mx-auto max-w-7xl px-6 ${className}`}>
       {children}
     </div>
   );
 };
-

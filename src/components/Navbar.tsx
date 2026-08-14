@@ -56,23 +56,44 @@ const Navbar = ({ navLinks }: NavbarProps) => {
           </button>
         </div>
 
-        {/* Mobile Button */}
-        <button
-          type="button"
-          aria-label={
-            menuOpen ? "Close navigation menu" : "Open navigation menu"
-          }
-          aria-expanded={menuOpen}
-          aria-controls="mobile-navigation"
-          className="text-gray-900 transition-colors duration-300 dark:text-white md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
+        {/* Mobile Controls */}
+        <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile Theme Toggle */}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={
+              theme === "light"
+                ? "Switch to dark mode"
+                : "Switch to light mode"
+            }
+            className="flex items-center justify-center rounded-full border border-gray-200 p-2 text-gray-700 transition-colors duration-300 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+          >
+            {theme === "light" ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            className="text-gray-900 transition-colors duration-300 dark:text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -92,28 +113,6 @@ const Navbar = ({ navLinks }: NavbarProps) => {
                 {link.name}
               </a>
             ))}
-
-            {/* Mobile Theme Toggle */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={
-                theme === "light"
-                  ? "Switch to dark mode"
-                  : "Switch to light mode"
-              }
-              className="mt-4 flex items-center gap-2 border-t border-gray-100 pt-4 text-gray-600 transition-colors duration-300 hover:text-gray-900 dark:border-gray-800 dark:text-gray-300 dark:hover:text-white"
-            >
-              {theme === "light" ? (
-                <Moon className="h-5 w-5" />
-              ) : (
-                <Sun className="h-5 w-5" />
-              )}
-
-              <span>
-                {theme === "light" ? "Dark mode" : "Light mode"}
-              </span>
-            </button>
           </nav>
         </div>
       )}

@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
           <div className="mt-6">
             <a
-              href="/cv/Emmanuel-Chidiebere-CV.pdf"
+              href="/cv/Emmanuel_Onwuzuruigbo_CV.pdf"
               download
               className="text-sm font-medium text-gray-300 transition hover:text-white hover:underline"
             >

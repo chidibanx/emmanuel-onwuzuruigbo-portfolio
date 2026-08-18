@@ -91,7 +91,11 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex aspect-square w-full max-w-md items-center justify-center overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900"
         >
-          Image Placeholder
+          <img
+            src="/images/headshot.png"
+            alt="Portrait of Onwuzuruigbo Emmanuel"
+            className="h-full w-full object-cover"
+          />
         </motion.div>
         <div>
           <p className="mt-4 text-sm font-medium text-gray-500 transition-colors duration-300 dark:text-gray-400">

@@ -1,11 +1,13 @@
 export const hero = {
   badge: "Software Engineer",
 
-  heading:
-    "Shipping production systems, from a nationwide QR voucher platform to enterprise automation.",
+  heading: "I build responsive web applications and business tools that solve real-world problems.",
 
   description:
-    " Software Engineer working across front-end development, business automation, and QA. I build with React, TypeScript, and Tailwind, design low-code workflows, and bring a testing-first mindset to everything I ship, from consumer-facing platforms to internal systems.",
+    "I'm a Software Engineer specializing in React, TypeScript, and frontend development, with experience building production platforms, administrative dashboards, and enterprise workflow automation solutions.",
+
+  proof:
+    "Production impact: supported 10+ fuel stations and 200+ successful voucher redemptions, with a reported 99% reduction in manual processing errors.",
 
   buttons: {
     primary: "View Projects",

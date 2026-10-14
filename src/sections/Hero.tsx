@@ -58,6 +58,15 @@ const Hero = () => {
             {hero.description}
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-4 max-w-2xl text-sm leading-6 text-gray-600 dark:text-gray-300"
+          >
+            {hero.proof}
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
